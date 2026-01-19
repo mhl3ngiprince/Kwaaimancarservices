@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="120dp"
+    android:height="120dp"
+    android:viewportWidth="120"
+    android:viewportHeight="120">
+
+    <!-- Background Circle -->
+    <path
+        android:fillColor="#FFFFFFFF"
+        android:pathData="M60,10 C32.39,10 10,32.39 10,60 C10,87.61 32.39,110 60,110 C87.61,110 110,87.61 110,60 C110,32.39 87.61,10 60,10 Z" />
+
+    <!-- Car Body -->
+    <path
+        android:fillColor="#FF1976D2"
+        android:pathData="M35,55 L85,55 C87.76,55 90,57.24 90,60 L90,75 C90,77.76 87.76,80 85,80 L35,80 C32.24,80 30,77.76 30,75 L30,60 C30,57.24 32.24,55 35,55 Z" />
+
+    <!-- Car Top -->
+    <path
+        android:fillColor="#FF0D47A1"
+        android:pathData="M42,40 L78,40 C80.21,40 82,41.79 82,44 L82,55 L38,55 L38,44 C38,41.79 39.79,40 42,40 Z" />
+
+    <!-- Windshield -->
+    <path
+        android:fillColor="#FF90CAF9"
+        android:pathData="M44,42 L76,42 C77.1,42 78,42.9 78,44 L78,53 L42,53 L42,44 C42,42.9 42.9,42 44,42 Z" />
+
+    <!-- Front Wheel -->
+    <path
+        android:fillColor="#FF424242"
+        android:pathData="M45,75 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" />
+
+    <!-- Rear Wheel -->
+    <path
+        android:fillColor="#FF424242"
+        android:pathData="M75,75 m-8,0 a8,8 0 1,0 16,0 a8,8 0 1,0 -16,0" />
+
+    <!-- Front Wheel Hub -->
+    <path
+        android:fillColor="#FFBDBDBD"
+        android:pathData="M45,75 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+
+    <!-- Rear Wheel Hub -->
+    <path
+        android:fillColor="#FFBDBDBD"
+        android:pathData="M75,75 m-4,0 a4,4 0 1,0 8,0 a4,4 0 1,0 -8,0" />
+
+    <!-- Headlight -->
+    <path
+        android:fillColor="#FFFFEB3B"
+        android:pathData="M88,62 m-3,0 a3,3 0 1,0 6,0 a3,3 0 1,0 -6,0" />
+
+    <!-- Door Handle -->
+    <path
+        android:fillColor="#FF0D47A1"
+        android:pathData="M55,60 h4 a1,1 0 0 1 1,1 v0 a1,1 0 0 1 -1,1 h-4 a1,1 0 0 1 -1,-1 v0 a1,1 0 0 1 1,-1 z" />
+
+</vector>

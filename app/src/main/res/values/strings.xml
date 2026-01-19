@@ -1,0 +1,116 @@
+<resources>
+    <string name="app_name">Kwaaiman</string>
+    <string name="action_settings">Settings</string>
+
+    <!-- Navigation Drawer Strings -->
+    <string name="navigation_drawer_open">Open navigation drawer</string>
+    <string name="navigation_drawer_close">Close navigation drawer</string>
+
+    <!-- Main Activity Strings -->
+    <string name="find_kwaaiman">Find Kwaaiman</string>
+    <string name="book_ride">Book Ride</string>
+    <string name="pickup_location_hint">Pickup location</string>
+    <string name="destination_hint">Where to?</string>
+    <string name="emergency">Emergency</string>
+    <string name="current_location">Current Location</string>
+
+    <!-- Trip Status Strings -->
+    <string name="driver_assigned">Driver assigned</string>
+    <string name="driver_arriving">Driver arriving</string>
+    <string name="driver_arrived">Driver arrived</string>
+    <string name="trip_in_progress">Trip in progress</string>
+    <string name="trip_completed">Trip completed</string>
+
+    <!-- Quick Actions -->
+    <string name="to_campus">To Campus</string>
+    <string name="from_campus">From Campus</string>
+    <string name="schedule_ride">Schedule</string>
+
+    <!-- Navigation Menu Items -->
+    <string name="nav_profile">Profile</string>
+    <string name="nav_trip_history">Trip History</string>
+    <string name="nav_payment">Payment Methods</string>
+    <string name="nav_settings">Settings</string>
+    <string name="nav_support">Help &amp; Support</string>
+    <string name="nav_logout">Logout</string>
+
+    <!-- Authentication Strings -->
+    <string name="sign_in">Sign In</string>
+    <string name="sign_up">Sign Up</string>
+    <string name="email_hint">Email address</string>
+    <string name="password_hint">Password</string>
+    <string name="confirm_password_hint">Confirm password</string>
+    <string name="forgot_password">Forgot Password?</string>
+    <string name="dont_have_account">Don\'t have an account? Sign Up</string>
+    <string name="already_have_account">Already have an account? Sign In</string>
+
+    <!-- Onboarding Strings -->
+    <string name="onboarding_title_1">Quick &amp; Safe Rides</string>
+    <string name="onboarding_desc_1">Get reliable transportation to and from campus with verified student drivers</string>
+    <string name="onboarding_title_2">Student-Friendly Pricing</string>
+    <string name="onboarding_desc_2">Affordable rates designed specifically for students in Kimberley</string>
+    <string name="onboarding_title_3">Real-Time Tracking</string>
+    <string name="onboarding_desc_3">Track your ride in real-time and share your location with friends for safety</string>
+    <string name="onboarding_title_4">Schedule in Advance</string>
+    <string name="onboarding_desc_4">Book rides for classes, events, or weekend trips ahead of time</string>
+    <string name="next">Next</string>
+    <string name="skip">Skip</string>
+    <string name="get_started">Get Started</string>
+
+    <!-- Error Messages -->
+    <string name="error_email_required">Email is required</string>
+    <string name="error_invalid_email">Please enter a valid email address</string>
+    <string name="error_password_required">Password is required</string>
+    <string name="error_password_too_short">Password must be at least 6 characters</string>
+    <string name="error_passwords_dont_match">Passwords do not match</string>
+    <string name="error_pickup_required">Please enter pickup location</string>
+    <string name="error_destination_required">Please enter destination</string>
+    <string name="error_location_permission">Location permission is required for the app to work properly</string>
+
+    <!-- Success Messages -->
+    <string name="driver_found">Driver found! %1$s is on the way</string>
+    <string name="registration_successful">Registration successful! Please sign in.</string>
+    <string name="password_reset_sent">Password reset link sent to %1$s</string>
+
+    <!-- Trip Information -->
+    <string name="estimated_time">Estimated</string>
+    <string name="distance">Distance</string>
+    <string name="fare">Fare</string>
+    <string name="arrives_in">Arrives in %1$s</string>
+
+    <!-- Campus Information -->
+    <string name="unc_kimberley_campus">University of Northern Cape - Kimberley Campus</string>
+
+    <!-- Notifications -->
+    <string name="emergency_contacted">Emergency services contacted!</string>
+    <string name="getting_location">Getting your location...</string>
+    <string name="finding_driver">Finding Driver...</string>
+    <string name="schedule_coming_soon">Schedule Ride - Coming Soon!</string>
+
+    <!-- General -->
+    <string name="loading">Loading...</string>
+    <string name="retry">Retry</string>
+    <string name="cancel">Cancel</string>
+    <string name="ok">OK</string>
+    <string name="yes">Yes</string>
+    <string name="no">No</string>
+    
+    <!-- Navigation Header Strings -->
+    <string name="nav_header_desc">Navigation header</string>
+    <string name="nav_header_title">Kwaaiman Car Services</string>
+    <string name="nav_header_subtitle">Your trusted ride partner</string>
+    
+    <!-- General Strings -->
+    <string name="lorem_ipsum">Lorem ipsum dolor sit amet, consectetur adipiscing elit.</string>
+    <string name="previous">Previous</string>
+    
+    <!-- Additional Colors -->
+    <color name="gray_text">#FF666666</color>
+    
+    <!-- Navigation Menu Items -->
+    <string name="nav_driver">Driver Dashboard</string>
+    
+    <!-- Fragment Labels -->
+    <string name="first_fragment_label">First Fragment</string>
+    <string name="second_fragment_label">Second Fragment</string>
+</resources>

@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="black">#FF000000</color>
+    <color name="white">#FFFFFFFF</color>
+
+    <!-- Kwaaiman Brand Colors -->
+    <color name="primary_blue">#FF1976D2</color>
+    <color name="primary_blue_dark">#FF0D47A1</color>
+    <color name="primary_blue_light">#FF64B5F6</color>
+    <color name="accent_orange">#FFFF9800</color>
+    <color name="accent_orange_dark">#FFF57C00</color>
+
+    <!-- Splash Screen Colors -->
+    <color name="splash_tagline_color">#E6FFFFFF</color>
+    <color name="splash_version_color">#80FFFFFF</color>
+
+    <!-- Status Colors -->
+    <color name="success_green">#FF4CAF50</color>
+    <color name="warning_yellow">#FFFFC107</color>
+    <color name="error_red">#FFF44336</color>
+    <color name="info_cyan">#FF00BCD4</color>
+
+    <!-- Background Colors -->
+    <color name="background_light">#FFF5F5F5</color>
+    <color name="background_dark">#FF212121</color>
+    <color name="card_background">#FFFFFFFF</color>
+    <color name="card_background_dark">#FF424242</color>
+
+    <!-- Text Colors -->
+    <color name="text_primary">#DE000000</color>
+    <color name="text_secondary">#8A000000</color>
+    <color name="text_hint">#61000000</color>
+    <color name="text_primary_dark">#FFFFFFFF</color>
+    <color name="text_secondary_dark">#B3FFFFFF</color>
+    <color name="text_hint_dark">#80FFFFFF</color>
+
+    <!-- Divider Colors -->
+    <color name="divider_light">#1F000000</color>
+    <color name="divider_dark">#1FFFFFFF</color>
+
+    <!-- Trip Status Colors -->
+    <color name="trip_requested">#FFFF9800</color>
+    <color name="trip_accepted">#FF2196F3</color>
+    <color name="trip_in_progress">#FF4CAF50</color>
+    <color name="trip_completed">#FF009688</color>
+    <color name="trip_cancelled">#FFF44336</color>
+
+    <!-- Rating Colors -->
+    <color name="rating_excellent">#FF4CAF50</color>
+    <color name="rating_good">#FF8BC34A</color>
+    <color name="rating_average">#FFFFC107</color>
+    <color name="rating_poor">#FFFF9800</color>
+    <color name="rating_bad">#FFF44336</color>
+    
+    <!-- Premium Colors -->
+    <color name="gold">#FFFFD700</color>
+    <color name="gold_dark">#FFFFA500</color>
+    <color name="purple">#FF9C27B0</color>
+    <color name="purple_dark">#FF7B1FA2</color>
+    
+    <!-- Theme Colors -->
+    <color name="primary_color">@color/primary_blue</color>
+    <color name="primary_color_dark">@color/primary_blue_dark</color>
+    <color name="accent_color">@color/accent_orange</color>
+    <color name="background_color">@color/background_light</color>
+    
+    <!-- Grey Scale -->
+    <color name="grey_300">#FFE0E0E0</color>
+    <color name="grey_500">#FF9E9E9E</color>
+    <color name="grey_700">#FF616161</color>
+    
+    <!-- Dark Mode Colors -->
+    <color name="dark_background">#FF121212</color>
+    <color name="light_background">#FFFFFFFF</color>
+    
+    <!-- Additional Colors -->
+    <color name="green">#FF4CAF50</color>
+    <color name="gray">#FF808080</color>
+    <color name="light_gray">#FFD3D3D3</color>
+</resources>
