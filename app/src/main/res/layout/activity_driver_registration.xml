@@ -17,7 +17,7 @@
             android:layout_width="match_parent"
             android:layout_height="?attr/actionBarSize"
             android:background="?attr/colorPrimary"
-            app:title="Driver Registration"
+            app:title="@string/driver_registration_title"
             app:titleTextColor="@android:color/white"
             app:navigationIcon="@drawable/ic_arrow_back" />
 
@@ -36,7 +36,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Vehicle Information"
+                android:text="@string/vehicle_information"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="24dp" />
@@ -44,7 +44,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="License Number"
+                android:hint="@string/license_number_hint"
                 android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -57,7 +57,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Vehicle Model"
+                android:hint="@string/vehicle_model_hint"
                 android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -70,7 +70,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Vehicle Color"
+                android:hint="@string/vehicle_color_hint"
                 android:layout_marginBottom="16dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -83,7 +83,7 @@
             <com.google.android.material.textfield.TextInputLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Vehicle Plate Number"
+                android:hint="@string/vehicle_plate_number_hint"
                 android:layout_marginBottom="24dp">
 
                 <com.google.android.material.textfield.TextInputEditText
@@ -96,7 +96,7 @@
             <TextView
                 android:layout_width="wrap_content"
                 android:layout_height="wrap_content"
-                android:text="Upload Documents"
+                android:text="@string/upload_documents"
                 android:textSize="20sp"
                 android:textStyle="bold"
                 android:layout_marginBottom="16dp" />
@@ -117,7 +117,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Driver License"
+                        android:text="@string/driver_license"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="8dp" />
@@ -126,7 +126,7 @@
                         android:id="@+id/upload_license_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Upload Document"
+                        android:text="@string/upload_document"
                         style="@style/Widget.Material3.Button.OutlinedButton" />
 
                 </LinearLayout>
@@ -149,7 +149,7 @@
                     <TextView
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Vehicle Registration"
+                        android:text="@string/vehicle_registration"
                         android:textSize="16sp"
                         android:textStyle="bold"
                         android:layout_marginBottom="8dp" />
@@ -158,7 +158,7 @@
                         android:id="@+id/upload_registration_button"
                         android:layout_width="match_parent"
                         android:layout_height="wrap_content"
-                        android:text="Upload Document"
+                        android:text="@string/upload_document"
                         style="@style/Widget.Material3.Button.OutlinedButton" />
 
                 </LinearLayout>
@@ -169,7 +169,7 @@
                 android:id="@+id/submit_application_button"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Submit Application"
+                android:text="@string/submit_application"
                 android:layout_marginBottom="16dp"
                 style="@style/Widget.Material3.Button" />
 

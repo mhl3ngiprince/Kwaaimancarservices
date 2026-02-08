@@ -109,6 +109,32 @@
     
     <!-- Navigation Menu Items -->
     <string name="nav_driver">Driver Dashboard</string>
+        <string name="driver_dashboard_title">Driver Dashboard</string>
+        <string name="today_earnings">Today\'s Earnings</string>
+        <string name="weekly_earnings">Weekly Earnings</string>
+        <string name="monthly_earnings">Monthly Earnings</string>
+        <string name="total_rides">Total Rides</string>
+        <string name="driver_rating">Driver Rating</string>
+        <string name="zero_currency">R 0.00</string>
+        <string name="zero_value">0</string>
+        <string name="zero_rating">0.0 ★</string>
+            <string name="driver_registration_title">Driver Registration</string>
+            <string name="vehicle_information">Vehicle Information</string>
+            <string name="license_number_hint">License Number</string>
+            <string name="vehicle_model_hint">Vehicle Model</string>
+            <string name="vehicle_color_hint">Vehicle Color</string>
+            <string name="vehicle_plate_number_hint">Vehicle Plate Number</string>
+            <string name="upload_documents">Upload Documents</string>
+            <string name="driver_license">Driver License</string>
+            <string name="vehicle_registration">Vehicle Registration</string>
+            <string name="upload_document">Upload Document</string>
+            <string name="submit_application">Submit Application</string>
+                <string name="search_for_places_hint">Search for places...</string>
+                    <string name="location_address">Location Address</string>
+                    <string name="destination_text">Destination</string>
+                    <string name="fetching_destination">Fetching destination...</string>
+                    <string name="driver_name_text">Driver Name</string>
+                    <string name="call_driver">Call driver</string>
     
     <!-- Fragment Labels -->
     <string name="first_fragment_label">First Fragment</string>

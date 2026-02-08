@@ -52,7 +52,8 @@
                         android:layout_height="100dp"
                         android:src="@drawable/default_profile_image"
                         android:layout_gravity="center"
-                        android:layout_marginBottom="16dp" />
+                        android:layout_marginBottom="16dp"
+                        android:contentDescription="Profile image" />
 
                     <TextView
                         android:id="@+id/name_text_view"
@@ -238,7 +239,8 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/ic_check_circle"
-                            android:layout_marginEnd="12dp" />
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="Verified status" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -267,7 +269,8 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/ic_check_circle"
-                            android:layout_marginEnd="12dp" />
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="Verified status" />
 
                         <TextView
                             android:layout_width="0dp"
@@ -295,7 +298,8 @@
                             android:layout_width="24dp"
                             android:layout_height="24dp"
                             android:src="@drawable/ic_check_circle"
-                            android:layout_marginEnd="12dp" />
+                            android:layout_marginEnd="12dp"
+                            android:contentDescription="Verified status" />
 
                         <TextView
                             android:layout_width="0dp"

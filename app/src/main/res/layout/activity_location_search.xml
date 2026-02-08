@@ -25,7 +25,7 @@
                 android:id="@+id/search_edit_text"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:hint="Search for places..."
+                android:hint="@string/search_for_places_hint"
                 android:drawableStart="@drawable/ic_search"
                 android:drawablePadding="12dp"
                 android:padding="16dp"

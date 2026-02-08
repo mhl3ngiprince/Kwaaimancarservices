@@ -1,5 +1,7 @@
 # Kwaaiman Car Services - Premium Upgrade 🚗✨
 
+<!-- This is a documentation file. If you see syntax errors, they are likely from incorrect file type detection. -->
+
 ## Overview
 Transformed the basic car service app into one of South Africa's most advanced ride-hailing applications with premium features, cutting-edge technology, and exceptional user experience.
 
@@ -57,7 +59,7 @@ Transformed the basic car service app into one of South Africa's most advanced r
 ## 🛠️ Technical Implementation
 
 ### Dependencies Added
-```kotlin
+```gradle
 // Advanced UI Components
 implementation "androidx.compose.runtime:runtime:1.5.4"
 implementation "androidx.compose.material3:material3:1.1.2"

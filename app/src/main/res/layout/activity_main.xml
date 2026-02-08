@@ -26,7 +26,7 @@
                 android:layout_height="?attr/actionBarSize"
                 android:background="@color/primary_blue"
                 app:navigationIcon="@drawable/ic_menu"
-                app:title="Kwaaiman"
+                app:title="@string/app_name"
                 app:titleTextColor="@color/white" />
 
         </com.google.android.material.appbar.AppBarLayout>
@@ -38,7 +38,7 @@
             app:layout_behavior="@string/appbar_scrolling_view_behavior">
 
             <!-- Google Maps Fragment -->
-            <fragment
+            <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/map_fragment"
                 android:name="com.google.android.gms.maps.SupportMapFragment"
                 android:layout_width="match_parent"
@@ -99,7 +99,8 @@
                         android:layout_marginEnd="12dp"
                         android:background="@drawable/circle_background"
                         android:scaleType="centerCrop"
-                        android:src="@drawable/ic_person" />
+                        android:src="@drawable/ic_person"
+                        android:contentDescription="@string/driver_name_text" />
 
                     <LinearLayout
                         android:layout_width="0dp"
@@ -111,7 +112,7 @@
                             android:id="@+id/driver_name"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Driver Name"
+                            android:text="@string/driver_name_text"
                             android:textSize="16sp"
                             android:textStyle="bold" />
 
@@ -119,7 +120,7 @@
                             android:id="@+id/trip_status"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="On the way"
+                            android:text="@string/driver_arriving"
                             android:textColor="@color/primary_blue"
                             android:textSize="14sp" />
 
@@ -127,7 +128,7 @@
                             android:id="@+id/estimated_arrival"
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
-                            android:text="Arrives in 5 min"
+                            android:text="@string/arrives_in"
                             android:textColor="@color/text_secondary"
                             android:textSize="12sp" />
 
@@ -139,6 +140,7 @@
                         android:layout_height="40dp"
                         android:background="?attr/selectableItemBackgroundBorderless"
                         android:src="@drawable/ic_call"
+                        android:contentDescription="@string/call_driver"
                         app:tint="@color/success_green" />
 
                 </LinearLayout>
