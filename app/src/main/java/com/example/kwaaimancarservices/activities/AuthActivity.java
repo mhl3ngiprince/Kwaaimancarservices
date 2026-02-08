@@ -13,8 +13,8 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.kwaaimancarservices.MainActivity;
-import com.example.kwaaimancarservices.R;
+import com.kwaaimancarservices.rides.MainActivity;
+import com.kwaaimancarservices.rides.R;
 
 public class AuthActivity extends AppCompatActivity {
 

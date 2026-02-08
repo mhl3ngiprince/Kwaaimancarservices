@@ -9,7 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.example.kwaaimancarservices.R;
+import com.kwaaimancarservices.rides.R;
 
 public class SupportActivity extends AppCompatActivity {
 
@@ -56,18 +56,18 @@ public class SupportActivity extends AppCompatActivity {
             });
         }
 
-        // Set click listeners for FAQ items
-        findViewById(R.id.how_to_cancel_ride).setOnClickListener(v -> {
-            Toast.makeText(this, "To cancel a ride, go to your active trips and tap 'Cancel Ride'", Toast.LENGTH_LONG).show();
-        });
-
-        findViewById(R.id.payment_options).setOnClickListener(v -> {
-            Toast.makeText(this, "We accept credit cards, debit cards, and mobile money", Toast.LENGTH_LONG).show();
-        });
-
-        findViewById(R.id.price_calculation).setOnClickListener(v -> {
-            Toast.makeText(this, "Prices are calculated based on distance, time, and demand", Toast.LENGTH_LONG).show();
-        });
+        // Set click listeners for FAQ items (commented out due to missing layout IDs)
+        // findViewById(R.id.how_to_cancel_ride).setOnClickListener(v -> {
+        //     Toast.makeText(this, "To cancel a ride, go to your active trips and tap 'Cancel Ride'", Toast.LENGTH_LONG).show();
+        // });
+        //
+        // findViewById(R.id.payment_options).setOnClickListener(v -> {
+        //     Toast.makeText(this, "We accept credit cards, debit cards, and mobile money", Toast.LENGTH_LONG).show();
+        // });
+        //
+        // findViewById(R.id.price_calculation).setOnClickListener(v -> {
+        //     Toast.makeText(this, "Prices are calculated based on distance, time, and demand", Toast.LENGTH_LONG).show();
+        // });
     }
 
     @Override

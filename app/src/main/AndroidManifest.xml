@@ -18,8 +18,8 @@
 
     <!-- Camera and storage permissions -->
     <uses-permission android:name="android.permission.CAMERA" />
-    <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
-    <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE" />
+    <uses-permission android:name="android.permission.READ_MEDIA_IMAGES" android:minSdkVersion="33" />
+    <uses-permission android:name="android.permission.READ_MEDIA_VIDEO" android:minSdkVersion="33" />
 
     <!-- Notification and vibration -->
     <uses-permission android:name="android.permission.VIBRATE" />
@@ -28,6 +28,7 @@
     <!-- Foreground service for live tracking -->
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE" />
     <uses-permission android:name="android.permission.FOREGROUND_SERVICE_LOCATION" />
+        <uses-permission android:name="android.permission.POST_NOTIFICATIONS" />
 
     <!-- Hardware features -->
     <uses-feature
@@ -38,7 +39,7 @@
         android:required="false" />
 
     <application
-        android:name=".KwaaimanApplication"
+        android:name="com.example.kwaaimancarservices.KwaaimanApplication"
         android:allowBackup="true"
         android:dataExtractionRules="@xml/data_extraction_rules"
         android:fullBackupContent="@xml/backup_rules"
@@ -49,12 +50,12 @@
         android:theme="@style/Theme.KwaaimanCarServices"
         tools:targetApi="31">
 
-        <!-- Splash Activity (Launcher) -->
+        <!-- Main Activity (Launcher) -->
         <activity
-            android:name=".activities.SplashActivity"
+            android:name="com.example.kwaaimancarservices.MainActivity"
             android:exported="true"
-            android:theme="@style/Theme.KwaaimanCarServices.Splash"
-            android:screenOrientation="portrait">
+            android:theme="@style/Theme.KwaaimanCarServices"
+            android:screenOrientation="unspecified">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -63,68 +64,77 @@
 
         <!-- Onboarding Activity -->
         <activity
-            android:name=".activities.OnboardingActivity"
+            android:name="com.example.kwaaimancarservices.activities.OnboardingActivity"
             android:exported="false"
             android:theme="@style/Theme.KwaaimanCarServices.Onboarding"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="unspecified" />
 
         <!-- Authentication Activity -->
         <activity
-            android:name=".activities.AuthActivity"
+            android:name="com.example.kwaaimancarservices.activities.AuthActivity"
             android:exported="false"
             android:theme="@style/Theme.KwaaimanCarServices.Auth"
-            android:screenOrientation="portrait" />
+            android:screenOrientation="unspecified" />
 
-        <!-- Main Activity -->
-        <activity
-            android:name=".MainActivity"
-            android:exported="true"
-            android:theme="@style/Theme.KwaaimanCarServices"
-            android:screenOrientation="portrait">
-            <intent-filter>
-                <action android:name="android.intent.action.MAIN" />
-                <category android:name="android.intent.category.LAUNCHER" />
-            </intent-filter>
-        </activity>
+
 
         <!-- Profile Activity -->
         <activity
-            android:name=".activities.ProfileActivity"
+            android:name="com.example.kwaaimancarservices.activities.ProfileActivity"
             android:exported="false"
             android:theme="@style/Theme.KwaaimanCarServices" />
 
         <!-- Trip History Activity -->
         <activity
-            android:name=".activities.TripHistoryActivity"
+            android:name="com.example.kwaaimancarservices.activities.TripHistoryActivity"
             android:exported="false"
             android:theme="@style/Theme.KwaaimanCarServices" />
 
         <!-- Payment Methods Activity -->
         <activity
-            android:name=".activities.PaymentMethodsActivity"
+            android:name="com.example.kwaaimancarservices.activities.PaymentMethodsActivity"
             android:exported="false"
             android:theme="@style/Theme.KwaaimanCarServices" />
 
         <!-- Settings Activity -->
         <activity
-            android:name=".activities.SettingsActivity"
+            android:name="com.example.kwaaimancarservices.activities.SettingsActivity"
             android:exported="false"
             android:theme="@style/Theme.KwaaimanCarServices" />
 
         <!-- Driver Dashboard Activity -->
         <activity
-            android:name=".activities.DriverDashboardActivity"
+            android:name="com.example.kwaaimancarservices.activities.DriverDashboardActivity"
+            android:exported="false"
+            android:theme="@style/Theme.KwaaimanCarServices" />
+
+        <!-- Location Search Activity -->
+        <activity
+            android:name="com.example.kwaaimancarservices.activities.LocationSearchActivity"
+            android:exported="false"
+            android:theme="@style/Theme.KwaaimanCarServices"
+            android:windowSoftInputMode="adjustResize" />
+
+        <!-- Ride Booking Activity -->
+        <activity
+            android:name="com.example.kwaaimancarservices.activities.RideBookingActivity"
+            android:exported="false"
+            android:theme="@style/Theme.KwaaimanCarServices" />
+
+        <!-- Trip Tracking Activity -->
+        <activity
+            android:name="com.example.kwaaimancarservices.activities.TripTrackingActivity"
             android:exported="false"
             android:theme="@style/Theme.KwaaimanCarServices" />
 
         <!-- Google Maps API Key -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
-            android:value="YOUR_GOOGLE_MAPS_API_KEY_HERE" />
+            android:value="AIzaSyBfxKKGkrftRvCLtRme_IFb0I6tYRq6xvw" />
 
         <!-- Firebase Cloud Messaging Service -->
         <service
-            android:name=".services.KwaaimanFirebaseMessagingService"
+            android:name="com.example.kwaaimancarservices.services.FirebaseMessagingService"
             android:exported="false">
             <intent-filter>
                 <action android:name="com.google.firebase.MESSAGING_EVENT" />
@@ -133,9 +143,19 @@
 
         <!-- Location Tracking Service -->
         <service
-            android:name=".services.LocationTrackingService"
+            android:name="com.example.kwaaimancarservices.services.LocationTrackingService"
             android:exported="false"
             android:foregroundServiceType="location" />
+
+        <!-- Driver Matching Service -->
+        <service
+            android:name="com.example.kwaaimancarservices.services.DriverMatchingService"
+            android:exported="false" />
+
+        <!-- Security Service -->
+        <service
+            android:name="com.example.kwaaimancarservices.services.SecurityService"
+            android:exported="false" />
 
     </application>
 

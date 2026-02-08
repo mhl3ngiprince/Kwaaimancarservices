@@ -1,15 +1,10 @@
 package com.example.kwaaimancarservices;
 
 import android.Manifest;
-import android.animation.Animator;
-import android.animation.AnimatorListenerAdapter;
 import android.content.Intent;
 import android.content.SharedPreferences;
 import android.content.pm.PackageManager;
-import android.location.Location;
 import android.os.Bundle;
-import android.os.Handler;
-import android.os.Looper;
 import android.view.MenuItem;
 import android.view.View;
 import android.widget.Button;
@@ -34,6 +29,7 @@ import com.google.android.material.textfield.TextInputEditText;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.Locale;
 import java.util.Random;
 
 public class MainActivity extends AppCompatActivity implements NavigationView.OnNavigationItemSelectedListener {
@@ -44,20 +40,21 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     private ActionBarDrawerToggle toggle;
     
     // Bottom Sheet Components
-    private BottomSheetBehavior<View> bottomSheetBehavior;
     private MaterialCardView rideNowCard, scheduleCard, deliveryCard;
     private TextInputEditText pickupLocationInput, destinationInput;
     private CardView tripInfoCard;
     private TextView estimatedTime, estimatedDistance, estimatedFare;
     private Button bookRideButton;
 
-    // Map and Location Components
+    // Map Components
     private FloatingActionButton fabCurrentLocation, fabEmergency;
     private CardView tripStatusCard;
     private TextView driverName, tripStatus, estimatedArrival;
     
     // Permission Constants
     private static final int LOCATION_PERMISSION_REQUEST = 1001;
+    private static final int REQUEST_PICKUP_LOCATION = 1001;
+    private static final int REQUEST_DESTINATION_LOCATION = 1002;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -127,21 +124,28 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void setupBottomSheet() {
-        bottomSheetBehavior.setPeekHeight(280);
-        bottomSheetBehavior.setHideable(false);
-        bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
+        // Note: Bottom sheet functionality is commented out as the layout resource is not found
+        // Uncomment and implement when bottom sheet layout is available
+        /*
+        View bottomSheet = findViewById(R.id.bottom_sheet_ride_booking);
+        if (bottomSheet != null) {
+            bottomSheetBehavior = BottomSheetBehavior.from(bottomSheet);
+            bottomSheetBehavior.setPeekHeight(280);
+            bottomSheetBehavior.setHideable(false);
+            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
 
-        bottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
-            @Override
-            public void onStateChanged(@NonNull View bottomSheet, int newState) {
-                // Handle bottom sheet state changes
-            }
+            bottomSheetBehavior.addBottomSheetCallback(new BottomSheetBehavior.BottomSheetCallback() {
+                @Override
+                public void onStateChanged(@NonNull View bottomSheet, int newState) {
+                    // Handle bottom sheet state changes
+                }
 
-            @Override
-            public void onSlide(@NonNull View bottomSheet, float slideOffset) {
-                // Handle bottom sheet sliding
-            }
-        });
+                @Override
+                public void onSlide(@NonNull View bottomSheet, float slideOffset) {
+                    // Handle bottom sheet sliding
+                }
+            });
+        } */
     }
 
     private void setupLocationServices() {
@@ -187,10 +191,35 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     }
 
     private void openLocationPicker(String locationType) {
-        Toast.makeText(this, "Location picker coming soon!", Toast.LENGTH_SHORT).show();
+        Intent intent = new Intent(this, com.example.kwaaimancarservices.activities.LocationSearchActivity.class);
+        intent.putExtra("LOCATION_TYPE", locationType);
+        startActivityForResult(intent, locationType.equals("pickup") ? REQUEST_PICKUP_LOCATION : REQUEST_DESTINATION_LOCATION);
     }
 
-    // Removed onActivityResult as it's not needed without location search activity
+    @Override
+    protected void onActivityResult(int requestCode, int resultCode, Intent data) {
+        super.onActivityResult(requestCode, resultCode, data);
+        
+        if (resultCode == RESULT_OK && data != null) {
+            String locationName = data.getStringExtra("LOCATION_NAME");
+            String locationAddress = data.getStringExtra("LOCATION_ADDRESS");
+            String locationType = data.getStringExtra("LOCATION_TYPE");
+            
+            if (locationType != null && locationName != null) {
+                if (locationType.equals("pickup")) {
+                    pickupLocationInput.setText(locationAddress);
+                } else if (locationType.equals("destination")) {
+                    destinationInput.setText(locationAddress);
+                }
+                
+                // Update estimates if both fields are filled
+                if (!pickupLocationInput.getText().toString().isEmpty() && 
+                    !destinationInput.getText().toString().isEmpty()) {
+                    updateTripEstimates();
+                }
+            }
+        }
+    }
 
     private void handleBookRideClick() {
         String pickup = pickupLocationInput.getText().toString().trim();
@@ -206,8 +235,13 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
             return;
         }
 
-        Toast.makeText(this, "Booking from " + pickup + " to " + destination + " with fare: " + estimatedFare.getText().toString(), Toast.LENGTH_LONG).show();
-        // Intent would navigate to booking activity here when implemented
+        // Navigate to ride booking confirmation
+        Intent intent = new Intent(this, com.kwaaimancarservices.rides.activities.RideBookingActivity.class);
+        intent.putExtra("PICKUP_LOCATION", pickup);
+        intent.putExtra("DESTINATION_LOCATION", destination);
+        intent.putExtra("ESTIMATED_FARE", estimatedFare.getText().toString());
+        intent.putExtra("ESTIMATED_TIME", estimatedTime.getText().toString());
+        startActivity(intent);
     }
 
     private void getCurrentLocation() {
@@ -223,7 +257,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
     private void handleEmergencyClick() {
         // Handle emergency button click
-        Toast.makeText(this, "Emergency contact activated!", Toast.LENGTH_LONG).show();
+        // In a real app, this would activate the security service
+        Intent intent = new Intent(this, com.example.kwaaimancarservices.services.SecurityService.class);
+        startService(intent);
+        
+        // Get the service and activate emergency SOS
+        // Note: In a real implementation, you would bind to the service
+        // and call activateEmergencySOS() method
+        Toast.makeText(this, "Emergency SOS activated! Help is on the way.", Toast.LENGTH_LONG).show();
     }
 
     private void updateTripEstimates() {
@@ -232,14 +273,14 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
 
         if (!pickup.isEmpty() && !destination.isEmpty()) {
             // Simple fare calculation
-            Random random = new Random();
-            double fare = 35.0 + (random.nextDouble() * 30.0);
-            int minutes = 8 + random.nextInt(20);
-            double km = 3.0 + (random.nextDouble() * 15.0);
+            final Random random = new Random();
+            final double fare = 35.0 + (random.nextDouble() * 30.0);
+            final int minutes = 8 + random.nextInt(20);
+            final double km = 3.0 + (random.nextDouble() * 15.0);
             
             estimatedTime.setText(minutes + " min");
-            estimatedDistance.setText(String.format("%.1f km", km));
-            estimatedFare.setText("R " + String.format("%.2f", fare));
+            estimatedDistance.setText(String.format(Locale.getDefault(), "%.1f km", km));
+            estimatedFare.setText("R " + String.format(Locale.getDefault(), "%.2f", fare));
             showTripInfo(true);
         }
     }
@@ -317,8 +358,6 @@ public class MainActivity extends AppCompatActivity implements NavigationView.On
     public void onBackPressed() {
         if (drawerLayout.isDrawerOpen(GravityCompat.START)) {
             drawerLayout.closeDrawer(GravityCompat.START);
-        } else if (bottomSheetBehavior.getState() == BottomSheetBehavior.STATE_EXPANDED) {
-            bottomSheetBehavior.setState(BottomSheetBehavior.STATE_COLLAPSED);
         } else {
             super.onBackPressed();
         }

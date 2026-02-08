@@ -9,11 +9,12 @@ import android.widget.Button;
 import android.widget.ImageView;
 import android.widget.TextView;
 import android.widget.Toast;
+import java.util.Locale;
 
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.cardview.widget.CardView;
 
-import com.example.kwaaimancarservices.R;
+import com.kwaaimancarservices.rides.R;
 
 public class ProfileActivity extends AppCompatActivity {
 
@@ -79,15 +80,15 @@ public class ProfileActivity extends AppCompatActivity {
 
     private void loadUserData() {
         // Load user data from preferences or database
-        String userName = preferences.getString("user_name", "John Doe");
-        String userEmail = preferences.getString("user_email", "john.doe@example.com");
-        String userPhone = preferences.getString("user_phone", "+27 12 345 6789");
-        float userRating = preferences.getFloat("user_rating", 4.8f);
+        final String userName = preferences.getString("user_name", "John Doe");
+        final String userEmail = preferences.getString("user_email", "john.doe@example.com");
+        final String userPhone = preferences.getString("user_phone", "+27 12 345 6789");
+        final float userRating = preferences.getFloat("user_rating", 4.8f);
 
         nameTextView.setText(userName);
         emailTextView.setText(userEmail);
         phoneTextView.setText(userPhone);
-        ratingTextView.setText(String.format("%.1f", userRating));
+        ratingTextView.setText(String.format(Locale.getDefault(), "%.1f", userRating));
 
         // Set profile image (you could load from URL or local storage)
         profileImageView.setImageResource(R.drawable.default_profile_image);

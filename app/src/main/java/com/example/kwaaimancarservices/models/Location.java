@@ -17,6 +17,13 @@ public class Location {
         this.longitude = longitude;
     }
 
+    public Location(String name, String address) {
+        this.name = name;
+        this.address = address;
+        this.latitude = 0.0;
+        this.longitude = 0.0;
+    }
+
     // Getters
     public String getName() {
         return name;
@@ -54,5 +61,14 @@ public class Location {
     @Override
     public String toString() {
         return name + ", " + address;
+    }
+    
+    public java.util.Map<String, Object> toMap() {
+        java.util.Map<String, Object> map = new java.util.HashMap<>();
+        map.put("name", name);
+        map.put("address", address);
+        map.put("latitude", latitude);
+        map.put("longitude", longitude);
+        return map;
     }
 }

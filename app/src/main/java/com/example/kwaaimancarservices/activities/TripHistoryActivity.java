@@ -8,9 +8,9 @@ import androidx.appcompat.widget.Toolbar;
 import androidx.recyclerview.widget.LinearLayoutManager;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.kwaaimancarservices.R;
-import com.example.kwaaimancarservices.adapters.TripHistoryAdapter;
-import com.example.kwaaimancarservices.models.Trip;
+import com.kwaaimancarservices.rides.R;
+import com.kwaaimancarservices.rides.adapters.TripHistoryAdapter;
+import com.kwaaimancarservices.rides.models.Trip;
 
 import java.util.ArrayList;
 import java.util.List;

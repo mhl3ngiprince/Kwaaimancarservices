@@ -7,7 +7,7 @@ import android.widget.Toast;
 
 import androidx.appcompat.app.AppCompatActivity;
 
-import com.example.kwaaimancarservices.R;
+import com.kwaaimancarservices.rides.R;
 import com.google.android.material.textfield.TextInputEditText;
 
 public class DriverRegistrationActivity extends AppCompatActivity {

@@ -9,8 +9,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.kwaaimancarservices.R;
-import com.example.kwaaimancarservices.models.OnboardingItem;
+import com.kwaaimancarservices.rides.R;
+import com.kwaaimancarservices.rides.models.OnboardingItem;
 
 import java.util.List;
 

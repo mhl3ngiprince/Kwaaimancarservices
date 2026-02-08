@@ -1,0 +1,48 @@
+{
+  "project_info": {
+    "project_number": "847640759945",
+    "project_id": "kwaaiman-carservices",
+    "storage_bucket": "kwaaiman-carservices.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847640759945:android:5b57d04cfb20a66eaac058",
+        "android_client_info": {
+          "package_name": "com.kwaaimancarservices.rides"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfxKKGkrftRvCLtRme_IFb0I6tYRq6xvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:847640759945:android:5b57d04cfb20a66eaac058",
+        "android_client_info": {
+          "package_name": "com.kwaaimancarservices.rides.debug"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBfxKKGkrftRvCLtRme_IFb0I6tYRq6xvw"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

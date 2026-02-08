@@ -25,7 +25,7 @@ public class DriverDashboardActivity extends AppCompatActivity {
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
         if (getSupportActionBar() != null) {
-            getSupportActionBar().setTitle("Driver Dashboard");
+            getSupportActionBar().setTitle(getString(R.string.driver_dashboard_title));
             getSupportActionBar().setDisplayHomeAsUpEnabled(true);
             getSupportActionBar().setDisplayShowHomeEnabled(true);
         }
@@ -39,11 +39,11 @@ public class DriverDashboardActivity extends AppCompatActivity {
         TextView totalRides = findViewById(R.id.total_rides);
         TextView rating = findViewById(R.id.driver_rating);
         
-        if (todayEarnings != null) todayEarnings.setText("R 1,250");
-        if (weeklyEarnings != null) weeklyEarnings.setText("R 5,680");
-        if (monthlyEarnings != null) monthlyEarnings.setText("R 22,450");
-        if (totalRides != null) totalRides.setText("142");
-        if (rating != null) rating.setText("4.8 ★");
+        if (todayEarnings != null) todayEarnings.setText(getString(R.string.zero_currency));
+        if (weeklyEarnings != null) weeklyEarnings.setText(getString(R.string.zero_currency));
+        if (monthlyEarnings != null) monthlyEarnings.setText(getString(R.string.zero_currency));
+        if (totalRides != null) totalRides.setText(getString(R.string.zero_value));
+        if (rating != null) rating.setText(getString(R.string.zero_rating));
     }
 
     private void loadDriverStats() {

@@ -12,9 +12,9 @@ import android.widget.TextView;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.viewpager2.widget.ViewPager2;
 
-import com.example.kwaaimancarservices.R;
-import com.example.kwaaimancarservices.adapters.OnboardingAdapter;
-import com.example.kwaaimancarservices.models.OnboardingItem;
+import com.kwaaimancarservices.rides.R;
+import com.kwaaimancarservices.rides.adapters.OnboardingAdapter;
+import com.kwaaimancarservices.rides.models.OnboardingItem;
 
 import java.util.ArrayList;
 import java.util.List;

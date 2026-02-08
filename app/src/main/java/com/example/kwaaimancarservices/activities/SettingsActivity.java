@@ -6,7 +6,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.example.kwaaimancarservices.R;
+import com.kwaaimancarservices.rides.R;
 import com.google.android.material.switchmaterial.SwitchMaterial;
 
 public class SettingsActivity extends AppCompatActivity {
@@ -56,10 +56,10 @@ public class SettingsActivity extends AppCompatActivity {
             Toast.makeText(this, "Edit Profile clicked", Toast.LENGTH_SHORT).show();
         });
 
-        // Account section - Change Password
-        findViewById(R.id.change_password_card).setOnClickListener(v -> {
-            Toast.makeText(this, "Change Password clicked", Toast.LENGTH_SHORT).show();
-        });
+        // Account section - Change Password (using account_settings_card for now)
+        // findViewById(R.id.change_password_card).setOnClickListener(v -> {
+        //     Toast.makeText(this, "Change Password clicked", Toast.LENGTH_SHORT).show();
+        // });
 
         // Privacy section - Privacy Policy
         findViewById(R.id.privacy_policy_card).setOnClickListener(v -> {

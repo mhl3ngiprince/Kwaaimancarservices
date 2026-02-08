@@ -8,8 +8,8 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
-import com.example.kwaaimancarservices.R;
-import com.example.kwaaimancarservices.models.Trip;
+import com.kwaaimancarservices.rides.R;
+import com.kwaaimancarservices.rides.models.Trip;
 
 import java.util.List;
 

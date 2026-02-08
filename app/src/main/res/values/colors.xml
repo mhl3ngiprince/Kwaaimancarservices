@@ -19,6 +19,7 @@
     <color name="warning_yellow">#FFFFC107</color>
     <color name="error_red">#FFF44336</color>
     <color name="info_cyan">#FF00BCD4</color>
+    <color name="error_color">#FFF44336</color>
 
     <!-- Background Colors -->
     <color name="background_light">#FFF5F5F5</color>

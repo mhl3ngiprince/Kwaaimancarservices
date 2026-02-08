@@ -9,8 +9,8 @@ import android.os.Build;
 
 import androidx.core.app.NotificationCompat;
 
-import com.example.kwaaimancarservices.MainActivity;
-import com.example.kwaaimancarservices.R;
+import com.kwaaimancarservices.rides.MainActivity;
+import com.kwaaimancarservices.rides.R;
 import com.google.firebase.messaging.RemoteMessage;
 
 public class FirebaseMessagingService extends com.google.firebase.messaging.FirebaseMessagingService {

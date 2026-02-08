@@ -9,7 +9,7 @@ import android.widget.Toast;
 import androidx.appcompat.app.AppCompatActivity;
 import androidx.appcompat.widget.Toolbar;
 
-import com.example.kwaaimancarservices.activities.AuthActivity;
+import com.kwaaimancarservices.rides.activities.AuthActivity;
 
 public class SimpleMainActivity extends AppCompatActivity {
 
